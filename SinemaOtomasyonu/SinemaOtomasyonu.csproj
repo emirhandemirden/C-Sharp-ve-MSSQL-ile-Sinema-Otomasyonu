@@ -1,0 +1,678 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8EF7089B-6169-4899-9197-52CE7E24FD71}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SinemaOtomasyonu</RootNamespace>
+    <AssemblyName>SinemaOtomasyonu</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BiletDegistir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BiletDegistir.Designer.cs">
+      <DependentUpon>BiletDegistir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BiletGecmisleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BiletGecmisleri.Designer.cs">
+      <DependentUpon>BiletGecmisleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BiletGecmisleriDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BiletGecmisleriDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BiletIade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BiletIade.Designer.cs">
+      <DependentUpon>BiletIade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BiletlerDataSet.cs">
+      <DependentUpon>BiletlerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BiletlerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BiletlerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Biletler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Biletler.Designer.cs">
+      <DependentUpon>Biletler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BiletlerGecmisiListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BiletlerGecmisiListesi.Designer.cs">
+      <DependentUpon>BiletlerGecmisiListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BiletlerListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BiletlerListesi.Designer.cs">
+      <DependentUpon>BiletlerListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BiletSatis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BiletSatis.Designer.cs">
+      <DependentUpon>BiletSatis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BiletTurEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BiletTurEkle.Designer.cs">
+      <DependentUpon>BiletTurEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BiletTurGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BiletTurGuncelle.Designer.cs">
+      <DependentUpon>BiletTurGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BiletTurleriDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BiletTurleriDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BiletTurSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BiletTurSil.Designer.cs">
+      <DependentUpon>BiletTurSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmEkle.Designer.cs">
+      <DependentUpon>FilmEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmGecmisleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmGecmisleri.Designer.cs">
+      <DependentUpon>FilmGecmisleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmGecmisleriDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FilmGecmisleriDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FilmGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmGuncelle.Designer.cs">
+      <DependentUpon>FilmGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Filmler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Filmler.Designer.cs">
+      <DependentUpon>Filmler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmlerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FilmlerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FilmlerGecmisiListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmlerGecmisiListesi.Designer.cs">
+      <DependentUpon>FilmlerGecmisiListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmlerListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmlerListesi.Designer.cs">
+      <DependentUpon>FilmlerListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmlerListesiTuruneGore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmlerListesiTuruneGore.Designer.cs">
+      <DependentUpon>FilmlerListesiTuruneGore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmSil.Designer.cs">
+      <DependentUpon>FilmSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmTurEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmTurEkle.Designer.cs">
+      <DependentUpon>FilmTurEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmTurGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmTurGuncelle.Designer.cs">
+      <DependentUpon>FilmTurGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmTurleriDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FilmTurleriDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FilmTurSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmTurSil.Designer.cs">
+      <DependentUpon>FilmTurSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Vizyon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Vizyon.Designer.cs">
+      <DependentUpon>Form_Vizyon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelEkle.Designer.cs">
+      <DependentUpon>PersonelEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelGecmisleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelGecmisleri.Designer.cs">
+      <DependentUpon>PersonelGecmisleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelGecmisleriDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PersonelGecmisleriDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelGecmisleriListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelGecmisleriListesi.Designer.cs">
+      <DependentUpon>PersonelGecmisleriListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelGuncelle.Designer.cs">
+      <DependentUpon>PersonelGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personeller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personeller.Designer.cs">
+      <DependentUpon>Personeller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonellerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PersonellerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PersonellerListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonellerListesi.Designer.cs">
+      <DependentUpon>PersonellerListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelSil.Designer.cs">
+      <DependentUpon>PersonelSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalonEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalonEkle.Designer.cs">
+      <DependentUpon>SalonEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalonGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalonGuncelle.Designer.cs">
+      <DependentUpon>SalonGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalonlarDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonlarDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalonSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalonSil.Designer.cs">
+      <DependentUpon>SalonSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeansEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeansEkle.Designer.cs">
+      <DependentUpon>SeansEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeansGecmisleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeansGecmisleri.Designer.cs">
+      <DependentUpon>SeansGecmisleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeansGecmisleriDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SeansGecmisleriDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SeansGecmisleriListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeansGecmisleriListesi.Designer.cs">
+      <DependentUpon>SeansGecmisleriListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeansGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeansGuncelle.Designer.cs">
+      <DependentUpon>SeansGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seanslar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seanslar.Designer.cs">
+      <DependentUpon>Seanslar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeanslarDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SeanslarDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SeanslarListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeanslarListesi.Designer.cs">
+      <DependentUpon>SeanslarListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeanslarListesiFilmeGore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeanslarListesiFilmeGore.Designer.cs">
+      <DependentUpon>SeanslarListesiFilmeGore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeansSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeansSil.Designer.cs">
+      <DependentUpon>SeansSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Tanimlamalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tanimlamalar.Designer.cs">
+      <DependentUpon>Tanimlamalar.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BiletDegistir.resx">
+      <DependentUpon>BiletDegistir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BiletGecmisleri.resx">
+      <DependentUpon>BiletGecmisleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BiletIade.resx">
+      <DependentUpon>BiletIade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Biletler.resx">
+      <DependentUpon>Biletler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BiletlerGecmisiListesi.resx">
+      <DependentUpon>BiletlerGecmisiListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BiletlerListesi.resx">
+      <DependentUpon>BiletlerListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BiletSatis.resx">
+      <DependentUpon>BiletSatis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BiletTurEkle.resx">
+      <DependentUpon>BiletTurEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BiletTurGuncelle.resx">
+      <DependentUpon>BiletTurGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BiletTurSil.resx">
+      <DependentUpon>BiletTurSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmEkle.resx">
+      <DependentUpon>FilmEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmGecmisleri.resx">
+      <DependentUpon>FilmGecmisleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmGuncelle.resx">
+      <DependentUpon>FilmGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Filmler.resx">
+      <DependentUpon>Filmler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmlerGecmisiListesi.resx">
+      <DependentUpon>FilmlerGecmisiListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmlerListesi.resx">
+      <DependentUpon>FilmlerListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmlerListesiTuruneGore.resx">
+      <DependentUpon>FilmlerListesiTuruneGore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmSil.resx">
+      <DependentUpon>FilmSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmTurEkle.resx">
+      <DependentUpon>FilmTurEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmTurGuncelle.resx">
+      <DependentUpon>FilmTurGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmTurSil.resx">
+      <DependentUpon>FilmTurSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Vizyon.resx">
+      <DependentUpon>Form_Vizyon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelEkle.resx">
+      <DependentUpon>PersonelEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelGecmisleri.resx">
+      <DependentUpon>PersonelGecmisleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelGecmisleriListesi.resx">
+      <DependentUpon>PersonelGecmisleriListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelGuncelle.resx">
+      <DependentUpon>PersonelGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personeller.resx">
+      <DependentUpon>Personeller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonellerListesi.resx">
+      <DependentUpon>PersonellerListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelSil.resx">
+      <DependentUpon>PersonelSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report10.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
+    <EmbeddedResource Include="Report5.rdlc" />
+    <EmbeddedResource Include="Report6.rdlc" />
+    <EmbeddedResource Include="Report7.rdlc" />
+    <EmbeddedResource Include="Report8.rdlc" />
+    <EmbeddedResource Include="Report9.rdlc" />
+    <EmbeddedResource Include="SalonEkle.resx">
+      <DependentUpon>SalonEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalonGuncelle.resx">
+      <DependentUpon>SalonGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalonSil.resx">
+      <DependentUpon>SalonSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeansEkle.resx">
+      <DependentUpon>SeansEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeansGecmisleri.resx">
+      <DependentUpon>SeansGecmisleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeansGecmisleriListesi.resx">
+      <DependentUpon>SeansGecmisleriListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeansGuncelle.resx">
+      <DependentUpon>SeansGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seanslar.resx">
+      <DependentUpon>Seanslar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeanslarListesi.resx">
+      <DependentUpon>SeanslarListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeanslarListesiFilmeGore.resx">
+      <DependentUpon>SeanslarListesiFilmeGore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeansSil.resx">
+      <DependentUpon>SeansSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tanimlamalar.resx">
+      <DependentUpon>Tanimlamalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="BiletGecmisleriDataSet.xsc">
+      <DependentUpon>BiletGecmisleriDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BiletGecmisleriDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BiletGecmisleriDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BiletGecmisleriDataSet.xss">
+      <DependentUpon>BiletGecmisleriDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BiletlerDataSet.xsc">
+      <DependentUpon>BiletlerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BiletlerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BiletlerDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BiletlerDataSet.xss">
+      <DependentUpon>BiletlerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BiletTurleriDataSet.xsc">
+      <DependentUpon>BiletTurleriDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BiletTurleriDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BiletTurleriDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BiletTurleriDataSet.xss">
+      <DependentUpon>BiletTurleriDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FilmGecmisleriDataSet.xsc">
+      <DependentUpon>FilmGecmisleriDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FilmGecmisleriDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FilmGecmisleriDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FilmGecmisleriDataSet.xss">
+      <DependentUpon>FilmGecmisleriDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FilmlerDataSet.xsc">
+      <DependentUpon>FilmlerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FilmlerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FilmlerDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FilmlerDataSet.xss">
+      <DependentUpon>FilmlerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FilmTurleriDataSet.xsc">
+      <DependentUpon>FilmTurleriDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FilmTurleriDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FilmTurleriDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FilmTurleriDataSet.xss">
+      <DependentUpon>FilmTurleriDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="PersonelGecmisleriDataSet.xsc">
+      <DependentUpon>PersonelGecmisleriDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PersonelGecmisleriDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PersonelGecmisleriDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PersonelGecmisleriDataSet.xss">
+      <DependentUpon>PersonelGecmisleriDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PersonellerDataSet.xsc">
+      <DependentUpon>PersonellerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PersonellerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PersonellerDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PersonellerDataSet.xss">
+      <DependentUpon>PersonellerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SalonlarDataSet.xsc">
+      <DependentUpon>SalonlarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SalonlarDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonlarDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonlarDataSet.xss">
+      <DependentUpon>SalonlarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SeansGecmisleriDataSet.xsc">
+      <DependentUpon>SeansGecmisleriDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SeansGecmisleriDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SeansGecmisleriDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SeansGecmisleriDataSet.xss">
+      <DependentUpon>SeansGecmisleriDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SeanslarDataSet.xsc">
+      <DependentUpon>SeanslarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SeanslarDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SeanslarDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SeanslarDataSet.xss">
+      <DependentUpon>SeanslarDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
